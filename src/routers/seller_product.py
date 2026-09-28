@@ -43,6 +43,6 @@ def delete_product_api(
 ):
     return product_service.delete_product(id, db, current_user)
 
-@router.post("/{id}/image")
-async def upload_image_api(product_id:int, image: UploadFile= File(...), db= Depends(get_db), current_user= Depends(require_roles(UserRole.SELLER, UserRole.ADMIN))):
-    return await product_service.upload_product_image(product_id, image, db, current_user)
+# @router.post("/{id}/image")
+# async def upload_image_api(product_id:int, image: UploadFile= File(...), db= Depends(get_db), current_user= Depends(require_roles(UserRole.SELLER, UserRole.ADMIN))):
+#     return await product_service.upload_product_image(product_id, image, db, current_user)
