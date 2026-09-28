@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, UploadFile, File
 from src.database import get_db
 from src.schemas.product import ProductCreate, ProductResponse, ProductUpdate
 from src.dependencies.role import require_roles
-from src.models.category import UserRole
+from src.models.user import UserRole
 import src.services.seller_product_service as product_service
 
 router = APIRouter(prefix="/seller/products", tags=["Seller Products"])
